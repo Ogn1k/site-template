@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>site#1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- header section -->
+    <header class="site-header">
+        <div class="header-inner">
+
+            <div class="left">
+                <div class="logo">lang</div>
+            </div>
+
+            <h1 class="title">lorem!</h1>
+
+            <div class="right">
+                <div class="avatar" title="telegramm">teleg</div>
+                <div class="avatar" title="profile">user</div>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#">home</a></li>
+                <li><a href="#">about</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">contacts</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <!-- header section end -->
+
+    <!-- hero section -->
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">Lorem Ipsum!</h2>
+            <a href="#" class="hero-button">button</a>
+        </div>
+            
+    </section>
+
+    <!-- hero section end -->
+
+    
+
+    <!-- card section -->
+
+    <section class="cards">
+        <div class="card">
+            <img src="#" alt="burga">
+            <h3>Lorem Impsum #1</h3>
+            <p>dolor sit amet consectetur adipiscing elit.</p>
+            <button class="button-card">Подробнее</button>
+        </div>
+
+        <div class="card">
+            <img src="#" alt="free">
+            <h3>Pretium tellus #2</h3>
+            <p>duis convallis tempus leo eu aenean. Iaculis massa nisl malesuada lacinia integer nunc posuere.</p>
+            <button class="button-card">Подробнее</button>
+        </div>
+
+        <div class="card">
+            <img src="#" alt="druka">
+            <h3>Conubia nostra #3</h3>
+            <p>inceptos himenaeos orci varius natoque penatibus.</p>
+            <button class="button-card">Подробнее</button>
+        </div>
+    </section>
+
+    <!-- card section end -->
+
+    <!-- map section -->
+
+    <section class="map-section">
+        <h2>вы находитесь здесь</h2>
+        <div id="map"></div>
+    </section>
+
+    <!-- map section end -->
+
+    <!-- footer section -->
+
+    <footer class="site-footer">
+        <div class="footer-top">
+            <a href="#">Lorem ipsum</a>
+            <a href="#">dolor sit</a>
+            <a href="#">amet consectetur</a>
+            <a href="#">adipiscing elit</a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>trade mark 2025 rating agent confidential shadow wizard money gang</p>
+        </div>
+    </footer>
+
+    <!-- footer section end -->
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script>
+        ymaps.ready(init);
+        function init()
+        {
+            var myMap = new ymaps.Map("map", {
+                center: [57.145138, 65.580331],
+                zoom: 16
+            });
+
+            var myPlacemark = new ymaps.myPlacemark([57.145138, 65.580331], {
+                hintContent: "здеся",
+                balloonContent: "смерть"
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+</body>
+</html>
