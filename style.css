@@ -155,6 +155,103 @@ body{
     background: rgba(0, 0, 0, .3);
 }
 
+/* slider cards section */
+
+.slider-container{
+    position:relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-track{
+    display:flex;
+    transition: transform .6s ease-in-out;
+}
+
+.slide{
+    flex: 0 0 33.3333%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.promo-card{
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .15);
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.promo-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .25);
+}
+
+.promo-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.promo-card:hover img{
+    transform: scale(1.05);
+}
+
+.promo-card-content{
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+}
+
+.promo-card-content h3{
+    font-size: 1.4rem;
+    margin: 0 0 6px;
+}
+
+.promo-card-content p{
+    margin: 0;
+    font-size: 1rem;
+}
+
+.promo-card-badge{
+    display: inline-block;
+    background: #e60012;
+    color: #fff;
+    font-size: .75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+}
+
+.slider-pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    gap: 8px;
+}
+
+.slider-dot{
+    width: 10px;
+    height: 10px;
+    background: #ffbc0d;
+    border-radius: 50%;
+    opacity: .5;
+    cursor: pointer;
+    transition: opacity .3s, transform .3s;
+}
+
+.slider-dot.active{
+    opacity:1;
+    transform:scale(1.2);
+    background: #e60012;
+}
+
 /* card section */
 
 .cards{
@@ -241,6 +338,7 @@ body{
 /* footer section */
 .site-footer{
     background: #111;
+    width: 100%;
     color: #fff;
     padding: 30px 20px;
     text-align: center;
