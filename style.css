@@ -161,17 +161,26 @@ body{
     position:relative;
     width: 100%;
     overflow: hidden;
+    /* margin-top: 60px; */
+    margin: 0 auto;
 }
 
 .slider-track{
     display:flex;
+    gap: 20px;
     transition: transform .6s ease-in-out;
 }
 
 .slide{
-    flex: 0 0 33.3333%;
-    padding: 10px;
+    flex: 0 0 70%;
+    border-radius: 16px;
+    /* background: #fff; */
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, .15); */
+    overflow: visible;
+    aspect-ratio: 16/9;
+    padding: 15px;
     box-sizing: border-box;
+    transition: transform .3s ease;
 }
 
 .promo-card{
@@ -179,7 +188,7 @@ body{
     aspect-ratio: 16/9;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, .15);
+    box-shadow: 0 8px 16px rgba(255, 13, 13, 0.15);
     cursor: pointer;
     transition: transform .3s ease, box-shadow .3s ease;
 }
@@ -233,6 +242,7 @@ body{
     display: flex;
     justify-content: center;
     margin-top: 16px;
+    margin-bottom: 20px;
     gap: 8px;
 }
 
