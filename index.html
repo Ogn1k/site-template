@@ -10,35 +10,6 @@
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
-    <!-- header section -->
-    <header class="site-header">
-        <div class="header-inner">
-
-            <div class="left">
-                <div class="logo">lang</div>
-            </div>
-
-            <h1 class="title">lorem!</h1>
-
-            <div class="right">
-                <div class="avatar" title="telegramm">teleg</div>
-                <div class="avatar" title="profile">user</div>
-            </div>
-        </div>
-
-        <nav class="main-nav">
-            <ul>
-                <li><a href="#">home</a></li>
-                <li><a href="#">about</a></li>
-                <li><a href="#">services</a></li>
-                <li><a href="#">contacts</a></li>
-            </ul>
-        </nav>
-        
-    </header>
-
-    <!-- header section end -->
-
     <!-- hero section -->
 
     <section class="hero">
@@ -168,7 +139,9 @@
     </footer>
 
     <!-- footer section end -->
-     <script src="main.js"></script>
+    <script src="header.js"></script>
+
+     <script src="js/promoCard.js"></script>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script>
@@ -176,11 +149,11 @@
         function init()
         {
             var myMap = new ymaps.Map("map", {
-                center: [57.145138, 65.580331],
+                center: [57.151194, 65.759027],
                 zoom: 16
             });
 
-            var myPlacemark = new ymaps.myPlacemark([57.145138, 65.580331], {
+            var myPlacemark = new ymaps.myPlacemark([57.151194, 65.759027], {
                 hintContent: "здеся",
                 balloonContent: "смерть"
             });
