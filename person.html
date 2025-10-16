@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1.0">
+        <title>site#1</title>
+        <link rel="stylesheet" href="person.css">
+    </head>
+    <body>
+        <main class="profile-container">
+            <section class="profile-left">
+                <img src="svg/person.svg" alt="Profile picture" class="profile-picture">
+                <button class="link-btn" id="change-picture">change picture</button>
+                <button class="link-btn" id="change-name">change name</button>
+                <button class="link-btn" id="change-password">change password</button>
+            </section>
+
+            <section class="profile-right">
+                <h1 id="username" contenteditable="true">user#123</h1>
+                
+                <div class="profile-info">
+                <label>
+                    date registered:
+                    <input type="text" id="date-registered" value="2025-01-10">
+                </label>
+                <label>
+                    birthday:
+                    <input type="date" id="birthday" value="2000-01-01">
+                </label>
+                </div>
+            </section>
+        </main>
+        <script src="header.js"></script>
+    </body>
+</html>

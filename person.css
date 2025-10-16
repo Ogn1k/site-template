@@ -1,0 +1,99 @@
+:root{
+    --accent: #111;
+    --bg: #fff;
+    --border: #e6e6e6;
+    --header-height: 80px;
+    --muted: #999;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+*{box-sizing: border-box;}
+body{
+    background: #fafafa;
+    color: var(--accent);
+    font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif;
+    
+}
+
+.profile-container {
+    
+  justify-content: center;
+  display: flex;
+  gap: 3rem;
+  padding: 2rem;
+  height: calc(100vh - var(--header-height));
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  
+  width: 100%;
+}
+
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  gap: 1rem;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #0077ff;
+  text-decoration: underline;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.link-btn:hover {
+  color: #004499;
+}
+
+.profile-right {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+}
+
+.profile-right h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.profile-info label {
+  display: block;
+  margin-bottom: 1rem;
+  font-family: "Georgia", serif;
+  font-style: italic;
+}
+
+.profile-info input {
+  border: none;
+  border-bottom: 1px solid #333;
+  font-size: 1rem;
+  padding: .2rem;
+  background: transparent;
+  outline: none;
+}
+
+@media (max-width: 700px) {
+  .profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
