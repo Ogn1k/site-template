@@ -79,10 +79,11 @@ document.querySelector("#registerForm").addEventListener("submit", async (e) => 
   const password = e.target.querySelector('input[placeholder="Пароль"]').value;
 
   try {
-    const res = await fetch("http://localhost:5500/api/register", {
+    const res = await fetch("http://localhost:8000/accounts/register/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ username, email, password }),
+      credentials: "include"
     });
 
     const data = await res.json();
@@ -106,10 +107,11 @@ document.querySelector("#loginForm").addEventListener("submit", async (e) => {
   const password = e.target.querySelector('input[placeholder="Пароль"]').value;
 
   try {
-    const res = await fetch("http://localhost:5500/api/login", {
+    const res = await fetch("http://localhost:8000/accounts/login/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email, password }),
+      credentials: "include"
     });
 
     const data = await res.json();
@@ -123,4 +125,20 @@ document.querySelector("#loginForm").addEventListener("submit", async (e) => {
     console.error("ошибка:", err);
     alert("запрос не отправлен");
   }
+
+  
 });
+
+// document.querySelector("logoutForm").addEventListener("submit", async (e) => {
+//   e.preventDefault();
+
+//   try {
+//     fetch("http://localhost:8000/accounts/logout/", {
+//     method: "POST",
+//     credentials: "include"
+//     });
+//   } catch (err) {
+//     console.error("ошибка:", err);
+//   }
+  
+// });

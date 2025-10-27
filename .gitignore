@@ -1,0 +1,23 @@
+# Виртуальные окружения
+venv/
+env/
+
+# Компиляция и временные файлы
+__pycache__/
+*.pyc
+
+# Секреты
+.env
+*.pem
+*.key
+
+# Базы данных
+db.sqlite3
+*.db
+
+# Логи и дампы
+*.log
+*.sql
+
+# Файлы Django collectstatic
+/static/
