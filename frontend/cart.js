@@ -1,3 +1,16 @@
+const totalPriceDiv = document.querySelector('.price');
+
+function updateTotal() {
+  var total = 0;
+  document.querySelectorAll('.cart-item').forEach(item => {
+    const count = parseInt(item.querySelector('.count').textContent);
+    const priceText = item.querySelector('.cost-value').textContent; 
+    const price = parseFloat(priceText.replace(/[^\d,.]/g, '').replace(',', '.'));
+    total += count * price;
+  });
+  totalPriceDiv.textContent = total.toFixed(2) + " Р";
+}
+
 document.querySelectorAll('.cart-item').forEach(item => {
   const minus = item.querySelector('.minus');
   const plus = item.querySelector('.plus');
@@ -5,21 +18,17 @@ document.querySelectorAll('.cart-item').forEach(item => {
 
   minus.addEventListener('click', () => {
     let value = parseInt(count.textContent);
-    if (value > 1) count.textContent = value - 1;
+    if (value > 1) {
+      count.textContent = value - 1;
+      updateTotal();
+    }
   });
 
   plus.addEventListener('click', () => {
     let value = parseInt(count.textContent);
     count.textContent = value + 1;
+    updateTotal();
   });
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector("site-header");
-  const main = document.querySelector("main") || document.querySelector(".container");
-  
-  if (header && main) {
-    const headerHeight = header.offsetHeight;
-    main.style.paddingTop = headerHeight + "px";
-  }
-});
+
