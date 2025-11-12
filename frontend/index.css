@@ -1,0 +1,309 @@
+.box {
+  display: flex;
+  justify-content: space-between;        
+  align-items: center;            
+  min-height: 60px;               
+  background: #f6f6f6; 
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  
+}
+.text-interface {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    gap: 50px; 
+    margin-left: auto;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2rem;
+    font-weight: bold; 
+    position: relative;
+}
+.text-interface a {
+    text-decoration: none;
+    color: inherit;
+}
+.text-interface :hover {
+    color: #c49a6c;
+
+}
+.images-interface-left {
+    display: flex;
+    margin-left: 50px;
+
+}
+.images-interface-left :hover { 
+    filter: brightness(90%); 
+}
+.images-interface-right {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+    margin-left: 600px;
+    margin-right: 50px;
+    gap: 20px; 
+}
+.images-interface-right :hover {
+    filter: brightness(90%);
+}
+.tg-image {
+    width: 30px;
+    height: auto;
+}
+.cart-image {
+     width: 30px;
+    height: auto;
+}
+.profile-image {
+    width: 40px;
+    height: auto;
+}
+.cart-image {
+    display: flex;
+    margin-right: 500px;
+}
+.hero {
+    background-image: url(webp/XIV_Dawntrail_Map.webp);
+}
+/* style.css */
+:root{
+    --accent: #111;
+    --bg: #fff;
+    --border: #e6e6e6;
+    --header-height: 80px;
+    --muted: #999;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+*{box-sizing: border-box;}
+body{
+    background: #fafafa;
+    color: var(--accent);
+    font-family: Inter, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.slider-container{
+    position:relative;
+    width: 100%;
+    overflow: hidden;
+    /* margin-top: 60px; */
+    margin: 0 auto;
+}
+
+.slider-track{
+    display:flex;
+    gap: 20px;
+    transition: transform .6s ease-in-out;
+}
+
+.slide{
+    flex: 0 0 70%;
+    border-radius: 16px;
+    /* background: #fff; */
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, .15); */
+    overflow: visible;
+    aspect-ratio: 16/9;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: transform .3s ease;
+}
+
+.promo-card{
+    position: relative;
+    aspect-ratio: 16/9;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(255, 13, 13, 0.15);
+    cursor: pointer;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.promo-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .25);
+}
+
+.promo-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .4s ease;
+}
+
+.promo-card:hover img{
+    transform: scale(1.05);
+}
+
+.promo-card-content{
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    color: #fff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, .6);
+}
+
+.promo-card-content h3{
+    font-size: 1.4rem;
+    margin: 0 0 6px;
+}
+
+.promo-card-content p{
+    margin: 0;
+    font-size: 1rem;
+}
+
+.promo-card-badge{
+    display: inline-block;
+    background: #e60012;
+    color: #fff;
+    font-size: .75rem;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-bottom: 8px;
+}
+
+.slider-pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    gap: 8px;
+}
+
+.slider-dot{
+    width: 10px;
+    height: 10px;
+    background: #ffbc0d;
+    border-radius: 50%;
+    opacity: .5;
+    cursor: pointer;
+    transition: opacity .3s, transform .3s;
+}
+
+.slider-dot.active{
+    opacity:1;
+    transform:scale(1.2);
+    background: #e60012;
+}
+
+/* card section */
+
+.cards{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    
+}
+
+.card{
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+    
+}
+
+.card img{
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    object-fit:cover;
+    background: linear-gradient(135deg, #ffbc0d, #ff7300); /*  url("#") */
+    border-radius: 12px;
+    margin-bottom: 15px;
+}
+
+.card h3{
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.card p{
+    font-size: .9rem;
+    color: #555;
+}
+
+.button-card{
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background: #ffbc0d;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background .3s;
+}
+
+.button-card:hover{
+    background: #ffa500;
+}
+
+.card:hover{
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, .15);
+}
+
+/* map sectiom */
+
+.map-section{
+    padding: 40px 20px;
+    text-align: center;
+}
+
+#map{
+    width: 50vw;
+    height: 50vh;
+    margin: 20px auto;
+    border-radius: 50px;
+    overflow: hidden;
+    border: 2px solid #fff
+}
+
+/* footer section */
+.site-footer{
+    background: #111;
+    width: 100%;
+    color: #fff;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-top{
+    margin-bottom: 15px;
+}
+
+.footer-top a{
+    color: #ccc;
+    margin: 0 12px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-top a:hover{
+    color: #fff;
+}
+
+.footer-bottom{
+    font-size: 13px;
+    color: #888;
+}
+
+
