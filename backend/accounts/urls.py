@@ -5,4 +5,5 @@ urlpatterns = [
     path("register/", views.register_api, name="api_register"),
     path("login/", views.login_api, name="api_login"),
     path("logout/", views.logout_api, name="api_logout"),
+    path("user/", views.user_info, name="user_info"),
 ]

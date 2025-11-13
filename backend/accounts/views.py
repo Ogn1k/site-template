@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
 
 @csrf_exempt
 def register_api(request):
@@ -71,3 +73,22 @@ def logout_api(request):
         return JsonResponse({"error": "POST required"}, status=405)
     logout(request)
     return JsonResponse({"success": True, "message": "Logged out"})
+
+@login_required
+def user_info(request):
+    profile = request.user.profile
+    return JsonResponse({
+        "username": request.user.username,
+        "email": request.user.email,
+        "avatar": profile.avatar.url if profile.avatar else "/media/avatars/default.png"
+    })
+
+@csrf_exempt
+@login_required
+def update_avatar(request):
+    if request.method == "POST" and request.FILES.get("avatar"):
+        profile = request.user.profile
+        profile.avatar = request.files["avatar"]
+        profile.save()
+        return JsonResponse({"success": True, "avatar": profile.avatar.url})
+    return JsonResponse({"error": "invalid request"}, status=400)
