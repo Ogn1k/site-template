@@ -68,6 +68,7 @@ body{
   display: flex;
   align-items: center;
   gap: .5rem;
+  margin-top: 50px;
 }
 
 .quantity button {
