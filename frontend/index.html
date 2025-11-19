@@ -125,21 +125,35 @@
             <img src="webp/Ishgard.webp" alt="burga">
             <h3>Lorem Impsum #1</h3>
             <p>dolor sit amet consectetur adipiscing elit.</p>
-            <button class="button-card">Подробнее</button>
+            <button class="button-card" data-id="1">Подробнее</button>
         </div>
 
         <div class="card">
             <img src="webp/XIV_Dawntrail_Map.webp" alt="free">
             <h3>Pretium tellus #2</h3>
             <p>duis convallis tempus leo eu aenean. Iaculis massa nisl malesuada lacinia integer nunc posuere.</p>
-            <button class="button-card">Подробнее</button>
+            <button class="button-card" data-id="2">Подробнее</button>
         </div>
 
         <div class="card">
             <img src="webp/Mare_Lamentorum_artwork_from_Final_Fantasy_XIV.webp" alt="druka">
             <h3>Conubia nostra #3</h3>
             <p>inceptos himenaeos orci varius natoque penatibus.</p>
-            <button class="button-card">Подробнее</button>
+            <button class="button-card" data-id="3">Подробнее</button>
+        </div>
+        
+        <div class = "info-popup"> 
+            <div class="popup-title">
+                <h3 class="title-text">Подробная информация</h3> 
+                <button class="close-popup-button">
+                    <img class ="close-popup-image" src="png/close-button.png" alt="Закрыть"></button>
+            </div>
+            <div class = "popup-desc">
+                <h3 class="description-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h3>
+            </div>  
+        </div>
+        
+        <div class = "darker">
         </div>
     </section>
 
@@ -170,9 +184,9 @@
     </footer>
 
     <!-- footer section end -->
-    <script src="header.js"></script>
+    <script src="index.js"></script>
 
-     <script src="js/promoCard.js"></script>
+    <script src="js/promoCard.js"></script>
 
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
     <script>
