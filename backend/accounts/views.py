@@ -106,8 +106,7 @@ def get_cart(request):
             "quantity": i.quantity
         }
         for i in items
-    ]
-    return JsonResponse({"cart": data})})
+    ]})
 
 def sync_cart(request):
     try:
